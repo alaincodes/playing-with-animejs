@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="./anime.min.js"></script>
+    <title>Anime JS</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+      }
+      #box {
+        background: gold;
+        width: 200px;
+        height: 200px;
+      }
+      .box2 {
+        width: 200px;
+        height: 200px;
+        background: black;
+        color: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">Hello</div>
+    <div class="box2">Dizzy</div>
+
+    <script>
+      anime({
+        targets: ["#box", ".box2"],
+        translateX: -200,
+        easing: "easeInOutExpo",
+        loop: true,
+        direction: "alternate"
+      });
+
+      anime({
+        targets: [".box2"],
+        width: "70%",
+        easing: "easeInOutQuad",
+        direction: "alternate",
+        loop: true
+      });
+    </script>
+  </body>
+</html>
